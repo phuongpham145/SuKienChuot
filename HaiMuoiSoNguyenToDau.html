@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hai Mươi Số Ngyên Tố</title>
+</head>
+<body>
+<form>
+    Liệt kê bao nhiêu số nguyên tố đầu tiên ?
+    <p style="color: blue">
+        <input type="text" id="so"/>
+    </p>
+    <p>
+        <button onclick="main()">Liệt Kê</button>
+    </p>
+</form>
+ <script>
+     function kt(n) {
+         let j ;
+         for(j=2;j<n;j++){
+             if(n % j == 0){
+                 return 0;
+             }
+         }
+         return 1 ;
+     }
+     function main() {
+         let dem = 0 ;
+         let i = 2 ;
+         d = Number(document.getElementById("so").value);
+         while (dem < d){
+             if (kt(i)){
+                 document.write(i + " ");
+                 dem ++ ;
+             }
+             i ++;
+         }
+
+     }
+ </script>
+</body>
+</html>
