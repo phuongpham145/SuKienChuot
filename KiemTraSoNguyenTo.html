@@ -7,7 +7,8 @@
 <body>
 <form>
     <input type="text" style="color: cornflowerblue" id="so">
-    <button type="button" style="border: blue" onclick="kt()">Kiểm Tra</button>
+    <button type="button" style="color: blue" onclick="kt()">Kiểm Tra</button>
+    <p id="display" style="font-size: 100px; color: blue"></p>
 </form>
   <script>
          function nguyento(n) {
@@ -18,15 +19,11 @@
              }
              return 1 ;
          }
-
-
          function kt() {
              b = Number(document.getElementById("so").value);
-             if(nguyento(b)) document.write( b +" là số nguyên tố ");
-             else document.write(b + " không là số nguyên tố ");
-
+             if(nguyento(b)) document.getElementById("display").innerHTML = b +" là số nguyên tố ";
+             else document.getElementById("display").innerHTML = b + " không là số nguyên tố ";
          }
-
   </script>
 </body>
 </html>
