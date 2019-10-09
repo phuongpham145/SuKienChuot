@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <p>
+        <label>Mets </label>
+        <input id="inputMets" type="number" placeholder="Mets"
+        onchange="metConverter(this.value)" style="background-color: red">
+    </p>
+    <p>
+        <label>Feets</label>
+        <input id="inputFeets" type="number" placeholder="Feets"
+        onchange="FeetConverter(this.value)" style="background-color: blue">
+    </p>
+</form>
+<script>
+    function metConverter(valNum) {
+        valNum = parseFloat(valNum);
+        document.getElementById("inputFeets").value = 3.279 * valNum  ;
+    }
+    function FeetConverter(valNum) {
+        valNum = parseFloat(valNum);
+        document.getElementById("inputMets").value = 0.305 * valNum;
+    }
+</script>
+</body>
+</html>
